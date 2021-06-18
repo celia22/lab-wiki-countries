@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import countriesJSON from '../countries.json';
 
 
@@ -29,13 +27,11 @@ const CountryDetails = (props) => {
         <tr >
           <td className="divide-y divide--gray-200">Borders: </td>
         </tr>  
-          <td>
+          <td> 
             <ul>             
             { country.borders.map((item, index) => {
                 return (
-                   <li key={index}>
-                      <Link to={item}>{item}</Link>
-                  </li>
+                   <li key={index}> <a href={`/${item}`}>{item}</a></li>
                       )
                    })}
             </ul>
@@ -45,7 +41,9 @@ const CountryDetails = (props) => {
     </div>          
     ) 
   }
-// }; 
+
 
 
 export default CountryDetails
+
+

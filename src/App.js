@@ -10,7 +10,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countries: this.countriesJSON,
+      countries: [],
+    };
+  }
+
+  componentDidMount() {
+    this.setState = {
+      status: countriesJSON,
     };
   }
 
